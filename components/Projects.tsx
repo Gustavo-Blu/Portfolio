@@ -18,7 +18,7 @@ export default function Projects() {
     <div>
       <h2>this is the projects page</h2>
       {projects.map((project, idx) => (
-        <div key={idx} className="bg-sky-700 flex gap-5 mb-10 p-2">
+        <div key={idx} className="bg-gray-500/30 flex gap-5 mb-10 p-2">
           <div>
             <Link href={project.websiteLink} target="_blank">
               <Image
@@ -29,10 +29,10 @@ export default function Projects() {
               />
             </Link>
           </div>
-          <div className="w-full text-center flex flex-col items-center relative">
+          <div className="w-full text-center flex flex-col items-center ">
             <h2 className="text-2xl mt-6 mb-2 underline">{project.name}</h2>
             <p>{project.description}</p>
-            <div className="flex gap-5 absolute bottom-10">
+            <div className="flex justify-around w-full">
               {project.technologies.map((tech) => {
                 const IconComponent =
                   tech[0] === 'F'
